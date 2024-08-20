@@ -1,4 +1,4 @@
-const { PrismaClient } = require("@prisma/client");
+import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
@@ -141,10 +141,16 @@ async function main() {
   ];
 
   posts.forEach(async (post) => {
-    await prisma.post.create({ data: post });
+    await prisma.post.upsert({
+      where: { slug: post.slug },
+      update: {},
+      create: post,
+    });
   });
+
   console.log("Seed OK");
 }
+
 main()
   .then(async () => {
     await prisma.$disconnect();
