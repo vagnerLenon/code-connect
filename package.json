@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma migrate dev && prisma generate && prisma db seed && next build",
+    "build": "prisma migrate dev && prisma generate && prisma db push && prisma db seed && next build",
     "start": "next start",
     "lint": "next lint"
   },
   "prisma": {
-    "seed": "node prisma/seed.js"
+    "seed": "ts-node --transpile-only prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.18.0",
