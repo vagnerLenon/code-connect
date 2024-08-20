@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && prisma migrate dev && prisma db seed && next build",
+    "build": "prisma generate && prisma migrate dev && npx prisma db push && prisma db seed && next build",
     "start": "next start",
     "lint": "next lint",
     "server": "json-server --watch C:/Users/semct//dev/javascript/nextjs/cursos/alura/code-connect/src/constants/posts.json --port 8000"
