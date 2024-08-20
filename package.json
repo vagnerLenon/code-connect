@@ -6,11 +6,10 @@
     "dev": "next dev",
     "build": "prisma migrate dev && prisma generate && prisma db seed && next build",
     "start": "next start",
-    "lint": "next lint",
-    "server": "json-server --watch C:/Users/semct//dev/javascript/nextjs/cursos/alura/code-connect/src/constants/posts.json --port 8000"
+    "lint": "next lint"
   },
   "prisma": {
-    "seed": "node prisma/seed.ts"
+    "seed": "ts-node prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.18.0",
