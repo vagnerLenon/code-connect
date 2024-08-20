@@ -1,0 +1,4 @@
+{"level":"error","message":"Erro ao buscar posts","service":"user-service"}
+{"level":"error","message":"Erro ao buscar posts.","service":"user-service"}
+{"level":"error","message":"Erro ao buscar posts da url http://localhost:8000/postss","service":"user-service"}
+{"error":{},"level":"error","message":"Erro ao carregar post com o slug","service":"user-service","slug":"construindo-spa-com-vuejs5"}
