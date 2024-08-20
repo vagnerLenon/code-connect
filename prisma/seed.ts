@@ -141,11 +141,7 @@ async function main() {
   ];
 
   posts.forEach(async (post) => {
-    await prisma.post.upsert({
-      where: { slug: post.slug },
-      update: {},
-      create: post,
-    });
+    await prisma.post.create({ data: post });
   });
   console.log("Seed OK");
 }
